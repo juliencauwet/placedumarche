@@ -14,13 +14,13 @@ public class Item {
     private float price;
     private String description;
 
-    public Item(String name, float price, String description) {
+    public Item(final String name, final float price, final String description) {
         this.name = name;
         this.price = price;
         this.description = description;
     }
 
-    public Item() {
+    private Item() {
     }
 
     public int getId() {
