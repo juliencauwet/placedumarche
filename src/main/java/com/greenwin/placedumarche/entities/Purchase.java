@@ -1,20 +1,23 @@
 package com.greenwin.placedumarche.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Purchase {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     private float total;
 
     @ManyToOne
     private Customer customer;
+
+    @OneToMany(mappedBy = "purchase")
+    private Set<Supplier> suppliers = new HashSet<>();
 
     public Purchase(float total, Customer customer) {
         this.total = total;
@@ -25,7 +28,7 @@ public class Purchase {
 
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

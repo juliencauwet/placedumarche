@@ -9,7 +9,7 @@ public class Item {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     private String name;
     private float price;
     private String description;
@@ -20,14 +20,14 @@ public class Item {
         this.description = description;
     }
 
-    private Item() {
+    public Item() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

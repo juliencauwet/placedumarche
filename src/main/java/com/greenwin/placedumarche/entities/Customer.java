@@ -12,7 +12,7 @@ public class Customer {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     private String email;
 
     @OneToMany(mappedBy = "customer")
@@ -26,11 +26,11 @@ public class Customer {
     private Customer() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

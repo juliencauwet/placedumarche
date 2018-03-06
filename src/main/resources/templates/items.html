@@ -2,13 +2,24 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>Articles</title>
 </head>
 <body>
+<header>
+    <a href="/map">sur la carte</a>
+    <a href="/prod">par producteur</a>
+</header>
 
 <section layout:fragment="content">
 
-    <h1>Je suis le contenu de la page</h1>
+    <fieldset>
+        <form action = "/items" method="post">
+            <input type="text" placeholder="Name" name="name"/><br />
+            <input type="number" placeholder="Price" name="price" /><br />
+            <textarea rows="10" name = "desc" placeholder="Description"/><br />
+            <input type="submit" />
+        </form>
+    </fieldset>
 
 </section>
 

@@ -4,14 +4,18 @@
 
 
 </head>
-<body>
-<header>
-    <h1>je suis le décorateur</h1>
-    <div th:include="deco/nav">
 
-    </div>
+<div class="container-fluid">
+<body>
+
+<header>
 </header>
 
+
+<div th:include="deco/nav"/>
+
 <section layout:fragment="content"></section>
+
 </body>
+</div>
 </html>
