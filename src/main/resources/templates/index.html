@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Accueil</title>
+</head>
+<body>
+    <a href="/items">items</a>
+
+    <section layout:fragment="content">
+        <div th:text="${message}"></div>
+    </section>
+</body>
+</html>
