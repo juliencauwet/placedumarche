@@ -1,6 +1,8 @@
 package com.greenwin.placedumarche.controller;
 
+import com.greenwin.placedumarche.entities.Category;
 import com.greenwin.placedumarche.entities.Item;
+import com.greenwin.placedumarche.services.CategoryService;
 import com.greenwin.placedumarche.services.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,14 +12,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class ItemsController {
 
     @Autowired
     ItemService itemService;
 
+    @Autowired
+    CategoryService categoryService;
+
     @GetMapping("/items")
-    public String items(){
+    public String items(Model model){
+        List <Category> catList = categoryService.getCategories();
+        model.addAttribute("listcat", catList);
+
         return "items";
     }
 

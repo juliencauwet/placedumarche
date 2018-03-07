@@ -3,6 +3,7 @@ package com.greenwin.placedumarche.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Item {
@@ -13,6 +14,9 @@ public class Item {
     private String name;
     private float price;
     private String description;
+
+    @ManyToOne
+    private Category category;
 
     public Item(final String name, final float price, final String description) {
         this.name = name;

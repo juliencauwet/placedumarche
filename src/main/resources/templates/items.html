@@ -17,6 +17,9 @@
             <input type="text" placeholder="Name" name="name"/><br />
             <input type="number" placeholder="Price" name="price" /><br />
             <textarea rows="10" name = "desc" placeholder="Description"/><br />
+            <select name="category">
+                <option th:each="cat:${listcat}" th:text="${cat.getName()}"></option>
+            </select>
             <input type="submit" />
         </form>
     </fieldset>
