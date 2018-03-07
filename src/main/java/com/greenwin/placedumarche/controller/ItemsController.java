@@ -33,11 +33,16 @@ public class ItemsController {
     }
 
     @RequestMapping(value = "/items", method = RequestMethod.POST)
-    public void addItem(@RequestParam("name") String name, @RequestParam("price") float price, @RequestParam("desc") String description){
+    public void addItem(@RequestParam("name") String name, @RequestParam("price") float price, @RequestParam("desc") String description, @RequestParam("category") String cat){
+
+        Category category = categoryService.getCategoryById(Integer.parseInt(cat));
+
         Item item = new Item();
         item.setName(name);
         item.setPrice(price);
         item.setDescription(description);
+        item.setCategory(category);
+
 
         itemService.addItem(item);
     }

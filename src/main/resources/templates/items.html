@@ -14,11 +14,11 @@
 
     <fieldset>
         <form action = "/items" method="post">
-            <input type="text" placeholder="Name" name="name"/><br />
-            <input type="number" placeholder="Price" name="price" /><br />
-            <textarea rows="10" name = "desc" placeholder="Description"/><br />
-            <select name="category">
-                <option th:each="cat:${listcat}" th:text="${cat.getName()}"></option>
+            <input class = "elt" type="text" placeholder="Name" name="name"/><br />
+            <input class = "elt" type="number" placeholder="Price" name="price" /><br />
+            <textarea class = "elt" rows="10" name = "desc" placeholder="Description"/><br />
+            <select class="elt" name="category">
+                <option th:each="cat:${listcat}" th:text="${cat.getName()}" th:value="${cat.getId()}"></option>
             </select>
             <input type="submit" />
         </form>

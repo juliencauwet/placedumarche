@@ -1,14 +1,23 @@
+:root {
+    --elsize: 10em; /* elements width */
+    --margL: 10px; /* margin (left and right)*/
+    --margT: 1em; /* margin top */
+    --bRs: 0.25em; /* border radius */
+    --bckCol: #213370; /* background color*/
+    --br: black 0.2em solid; /* border  */
+}
+
 body{
-    background-image: url("https://www.google.fr/imgres?imgurl=http%3A%2F%2Fmedia.mmv.fr%2Fbundles%2Fmmvwebsite%2Fmedia%2Fcontenu%2Fvignette-region%2Fvignette-montagne-hiver.jpg&imgrefurl=http%3A%2F%2Fwww.mmv.fr%2Fdestination-mer-montagne&docid=3fF9JVggd16OqM&tbnid=I_XxdHEIQY3jBM%3A&vet=10ahUKEwicpc_3ytjZAhWM7xQKHd9kA0MQMwgwKAEwAQ..i&w=564&h=226&bih=659&biw=1350&q=montagne&ved=0ahUKEwicpc_3ytjZAhWM7xQKHd9kA0MQMwgwKAEwAQ&iact=mrc&uact=8");
+    background: var(--bckCol);
 }
 
 .container-fluid{
-    width: 70%;
+    width: 80%;
 }
 
-input{
-
-    border: 1px black solid;
-    border-radius: 2%;
-    width: 15em;
+.elt{
+    margin-top: var(--margT);
+    border: var(--br);
+    border-radius: var(--bRs);
+    width: var(--elsize);
 }
