@@ -7,10 +7,6 @@
     --br: black 0.2em solid; /* border  */
 }
 
-body{
-    background: var(--bckCol);
-    color: floralwhite;
-}
 
 .container-fluid{
     width: 80%;

@@ -13,7 +13,7 @@ public class Address {
     private int id;
     private String city;
     private String zipCode;
-    private String Street;
+    private String street;
     private String number;
     private String building;
     private String sup;
@@ -27,7 +27,7 @@ public class Address {
     public Address(String city, String zipCode, String street, String number) {
         this.city = city;
         this.zipCode = zipCode;
-        Street = street;
+        this.street = street;
         this.number = number;
     }
 
@@ -60,11 +60,11 @@ public class Address {
     }
 
     public String getStreet() {
-        return Street;
+        return street;
     }
 
     public void setStreet(String street) {
-        Street = street;
+        this.street = street;
     }
 
     public String getNumber() {
