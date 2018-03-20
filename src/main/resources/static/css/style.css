@@ -9,6 +9,7 @@
 
 body{
     background: var(--bckCol);
+    color: floralwhite;
 }
 
 .container-fluid{
